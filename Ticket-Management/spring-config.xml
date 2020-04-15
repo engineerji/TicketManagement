@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<bean id="login" class="com.model.LoginDetails">
+		<constructor-arg index="0" value="rahul@123"></constructor-arg>
+		<constructor-arg index="1" value="rahul@123"></constructor-arg>
+	</bean>
+	
+	<bean id="traininfo" class="com.model.TrainDetails">
+		<property name="trainList">
+			<list>
+				<ref bean="train1"/>
+				<ref bean="train2"/>
+				<ref bean="train3"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="train1" class="com.model.TrainDetail">
+		<constructor-arg index="0" value="2548"/>
+		<constructor-arg index="1" value="Delhi"/>
+		<constructor-arg index="2" value="Mumbai"/>
+	</bean>
+	<bean id="train2" class="com.model.TrainDetail">
+		<constructor-arg index="0" value="2547"/>
+		<constructor-arg index="1" value="Delhi"/>
+		<constructor-arg index="2" value="Banglore"/>
+	</bean>
+	<bean id="train3" class="com.model.TrainDetail">
+		<constructor-arg index="0" value="2546"/>
+		<constructor-arg index="1" value="Delhi"/>
+		<constructor-arg index="2" value="Pune"/>
+	</bean>
+	
+</beans>
